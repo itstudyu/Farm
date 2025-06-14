@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+
+<main class="home-page">
+  <section
+    class="hero-section"
+    style="background-image: url('/images/hero-image.jpg')"
+  >
+    <div class="hero-content">
+      <div class="hero-logo-container">
+        <span class="logo-est">Est. 2008</span>
+        <h1 class="logo-main">高陽牧場</h1>
+      </div>
+      <div class="hero-text">
+        <h2>Cultivating Beauty</h2>
+        <p>We are a small family farm in Washington's Skagit Valley</p>
+        <a href="/about" class="btn">Read our story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-grid">
+    <div class="grid-item">
+      <img src="/images/grid-books.jpg" alt="Floret Books" />
+      <h3>Bestselling Books</h3>
+      <p>Cut Flower Garden, A Year in Flowers & Discovering Dahlias</p>
+      <a href="/books" class="learn-more">Learn More</a>
+    </div>
+    <div class="grid-item">
+      <img src="/images/grid-library.jpg" alt="Floret Library" />
+      <h3>Floret Library</h3>
+      <p>Discover new treasures for your garden</p>
+      <a href="/library" class="learn-more">Explore the Library</a>
+    </div>
+    <div class="grid-item">
+      <img src="/images/grid-resources.jpg" alt="Gardening Resources" />
+      <h3>Helpful How-to's</h3>
+      <p>Learn to grow the garden of your dreams</p>
+      <a href="/resources" class="learn-more">Visit our Resources</a>
+    </div>
+    <div class="grid-item">
+      <img src="/images/grid-workshops.jpg" alt="Flower Workshops" />
+      <h3>Specialized Training</h3>
+      <p>Flower lovers from around the world participate in our workshops</p>
+      <a href="/workshops" class="learn-more">Floret Workshops</a>
+    </div>
+  </section>
+
+  <section class="latest-posts">
+    <div class="section-header">
+      <h2>The Latest</h2>
+      <p>Recent happenings from around the farm</p>
+    </div>
+    <div class="posts-container">
+      <!-- Blog posts will be dynamically inserted here -->
+      <div class="post-card">
+        <img src="/images/post-zinnias.jpg" alt="Zinnias" />
+        <h4>How to Grow Zinnias</h4>
+        <a href="/blog/how-to-grow-zinnias" class="read-more">Read More</a>
+      </div>
+      <div class="post-card">
+        <img src="/images/post-dahlias.jpg" alt="Dahlias" />
+        <h4>How to Grow Dahlias from Seed</h4>
+        <a href="/blog/how-to-grow-dahlias" class="read-more">Read More</a>
+      </div>
+      <div class="post-card">
+        <img src="/images/post-celosia.jpg" alt="Celosia" />
+        <h4>How to Grow Celosia</h4>
+        <a href="/blog/how-to-grow-celosia" class="read-more">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit-us-section">
+    <div class="section-header">
+      <h2>Visit Our Farm</h2>
+      <p>
+        While our farm is a private workspace, you can find our flowers across
+        beautiful Hokkaido.
+      </p>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://maps.google.com/maps?q=Hokkaido,Japan&t=&z=8&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

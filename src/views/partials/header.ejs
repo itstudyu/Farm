@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="/">Floret</a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/tour">TOUR</a></li>
+            <li><a href="/history">HISTORY</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/shop">SHOP</a></li>
+            <% if (user) { %>
+            <li><a href="/logout">LOGOUT</a></li>
+            <% } else { %>
+            <li><a href="/login">LOGIN</a></li>
+            <% } %>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <% if (user) { %>
+          <span class="welcome-user">Hi, <%= user.name %></span>
+          <% } %>
+          <a href="/search" class="icon-button">Search</a>
+          <a href="/cart" class="icon-button">Cart</a>
+        </div>
+      </div>
+    </header>
+    <div class="content-pusher">
+      <% if (flash) { %>
+      <div class="flash-message flash-<%= flash.type %>">
+        <p><%= flash.message %></p>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
